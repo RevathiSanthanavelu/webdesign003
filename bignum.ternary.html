@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <title>Find Biggest Number</title>
+    <script>
+        function uToFloat(s){
+            var n = parseFloat(s);
+            n = isNaN(n) ? 0 : n;
+            return n;
+        }
+
+        function btnFind_onclick(){
+            // variable initialization
+            var fn = 0, sn = 0, tn = 0, bn = 0;
+
+            fn = uToFloat(numfn.value);
+            sn = uToFloat(numsn.value);
+            tn = uToFloat(numtn.value);
+
+            bn = fn > sn ? (fn > tn ? fn : tn) : (sn > tn ? sn : tn);
+
+            numfn.value = fn;
+            numsn.value = sn;
+            numtn.value = tn;
+            numbn.value = bn;
+        }
+    </script>
+</head>
+<table border="1">
+    <tr>
+        <td>First Number</td>
+        <td>
+            <input 
+            type="number" 
+            id="numfn" 
+            placeholder="0.0"
+            step="any">
+        </td>
+    </tr>
+    <tr>
+        <td>Second Number</td>
+        <td>
+            <input 
+            type="number" 
+            id="numsn" 
+            placeholder="0.0"
+            step="any">
+        </td>
+    </tr>
+    <tr>
+        <td>Thrid Number</td>
+        <td>
+            <input 
+            type="number" 
+            id="numtn" 
+            placeholder="0.0"
+            step="any">
+        </td>
+    </tr>
+    <tr>
+        <td>Biggest Number</td>
+        <td>
+            <input 
+            type="number" 
+            id="numbn"
+            placeholder="0.0"
+            step="any"
+            readonly="readonly">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="location.href='bignum.ternary.html';">Cancel</button>
+        </td>
+        <td>
+            <button onclick="btnFind_onclick();">Find</button>
+        </td>
+    </tr>
+</table>

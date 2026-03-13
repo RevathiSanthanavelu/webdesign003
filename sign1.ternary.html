@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Signature</title>
+
+    <script>
+        function btnFind_onclick(){
+            var n = 0;
+
+            n = numn.value;
+            n = parseFloat(n);
+            n = isNaN(n) ? 0 : n;
+
+            tbxsign.value = n==0 ? "Neutral" : (n>0 ? "Positive" : "Negative")
+
+            numn.value = n;
+        }
+    </script>
+</head>
+<table border="1">
+    <tr>
+        <td>Enter a Numeric Value</td>
+        <td>
+            <input type="number" id="numn" placeholder="0.0" step="any">
+        </td>
+    </tr>
+    <tr>
+        <td>Signature</td>
+        <td>
+            <input type="text" id="tbxsign" placeholder="neutral" readonly="readonly">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="location.href='sign1.ternary.html';">Cancel</button>
+        </td>
+        <td>
+            <button onclick="btnFind_onclick();">Find</button>
+        </td>
+    </tr>
+</table>

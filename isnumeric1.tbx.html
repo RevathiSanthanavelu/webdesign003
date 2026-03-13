@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Find Numeric Value</title>
+    <script>
+        function btnFind_onclick(){
+            var en = 0;
+
+            en = tbxen.value;
+            en = parseFloat(en);
+            if (isNaN(en)){
+                tbxxval.value = "Invalid";  
+            }
+            else{
+                tbxxval.value = "Valid";  
+            }
+        }
+    </script>
+</head>
+
+<table border="1">
+    <tr>
+        <td>Enter a Number</td>
+        <td>
+            <input type="text" id="tbxen" placeholder="0" step="any">
+        </td>
+    </tr>
+    <tr>
+        <td>Is Valid</td>
+        <td>
+            <input type="text" id="tbxxval" placeholder="Invalid" readonly="readonly">
+        </td>
+   </tr>
+    <tr>
+        <td>
+            <button onclick="location.href='isnumeric1.tbx.html'">Cancel</button>
+        </td>
+        <td>
+            <button onclick="btnFind_onclick();">Find</button>
+        </td>
+    </tr>
+</table>

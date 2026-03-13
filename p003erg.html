@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<script>
+    function btnFind_onclick(){
+        //below initialize variable
+        var m1 = 0, m2 = 0, total = 0, avg = 0, result = "Fail", grade = " ";
+
+        m1 = numm1.value;
+        m1 = parseFloat(m1);
+        m1 = isNaN(m1) ? 0 : m1;
+
+        m2 = numm2.value;
+        m2 = parseFloat(m2);
+        m2 = isNaN(m1) ? 0 : m2;
+
+        total = m1+m2;
+        avg = total/2;
+        result = (m1 > 34.4 && m2 >34.4) ? "Pass" : "Fail";
+        if (avg <= 100 && avg >97){
+            grade = "O Grade"
+        }
+        else if (avg <= 97 && avg >89){
+            grade = "A+ Grade"
+        }
+        else if (avg <= 89 && avg >84){
+            grade = "A Grade"
+        }
+        else if (avg <=84  && avg >79){
+            grade = "B Grade"
+        }
+
+        numm1.value = m1;
+        numm2.value = m2;
+        numtotal.value = total;
+        numavg.value = avg;
+        tbxres.value = result;
+        tbxgrade.value = grade;
+    };
+</script>
+
+<head>
+    <title>Exam Result</title>
+</head>
+
+<table border="1">
+    <tr>
+        <td>Roll No</td>
+        <td>
+            <input 
+            type="number"
+            id="numrno"
+            placeholder="0"
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>Student Name</td>
+        <td>
+            <input 
+            type="text"
+            id="tbxsname"
+            placeholder="unknown"
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>M1</td>
+        <td>
+            <input 
+            type="number"
+            id="numm1"
+            placeholder="0.0"
+            step="any"
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>M2</td>
+        <td>
+            <input 
+            type="number"
+            id="numm2"
+            placeholder="0.0"
+            step="any"
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>Total</td>
+        <td>
+            <input 
+            type="number"
+            id="numtotal"
+            placeholder="0.0"
+            step="any"
+            readonly
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>Average</td>
+        <td>
+            <input 
+            type="number"
+            id="numavg"
+            placeholder="0.0"
+            step="any"
+            readonly
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>Result</td>
+        <td>
+            <input 
+            type="text"
+            id="tbxres"
+            placeholder="0"
+            readonly
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>Grade</td>
+        <td>
+            <input 
+            type="text"
+            id="tbxgrade"
+            placeholder=" "
+            readonly
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input  
+            type="button"
+            value="Cancel"
+            onclick="location.href='p001er.html';"
+            >
+        </td>
+        <td>
+            <input 
+            type="button"
+            value="Find"
+            onclick="btnFind_onclick();"
+            >
+        </td>
+    </tr>
+</table>

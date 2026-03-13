@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Find Numeric Value</title>
+    <!-- <script>
+        function btnFind_onclick(){
+            var en = 0;
+
+            en = tbxen.value;
+            en = parseFloat(en);
+            en = isNaN(en) ? 0 : en;
+
+            if (en == 0){
+                rdobtnno.checked = true;
+            }
+            else{
+                rdobtnyes.checked = true;
+            }
+        }
+    </script> -->
+
+    <script>
+        function btnFind_onclick(){
+            var en = 0;
+
+            en = tbxen.value;
+            en = parseFloat(en);
+            en = isNaN(en) ? rdobtnno.checked=true : rdobtnyes.checked=true;
+        }
+    </script>
+</head>
+
+<table border="1">
+    <tr>
+        <td>Enter a Number</td>
+        <td>
+            <input type="text" id="tbxen" placeholder="0" step="any">
+        </td>
+    </tr>
+    <tr>
+        <td>Is Valid</td>
+        <td>
+            <input type="radio" id="rdobtnyes" name="result" disabled="disabled"> Yes
+            <input type="radio" id="rdobtnno" name="result" disabled="disabled"> No
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="location.href='isnumeric1.html'">Cancel</button>
+        </td>
+        <td>
+            <button onclick="btnFind_onclick();">Find</button>
+        </td>
+    </tr>
+</table>

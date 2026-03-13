@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<script>
+    function btnFind_onclick(){
+        //variable initialization
+        var sal = 0, tax10 = 0, tax20 = 0, tax30 = 0, tottax = 0, npay = 0;
+
+        sal = numsal.value;
+        sal = parseFloat(sal);
+        sal = isNaN(sal) ? 0 : sal;
+
+        if (sal > 1000000){
+            tax10 = 250000 * (10/100);
+            tax20 = 500000 * (20/100);
+            tax30 = (sal-1000000) * (30/100);
+        }
+        else if (sal > 500000){
+            tax10 = 250000 * (10/100);
+            tax20 = (sal-500000) * (20/100);
+        }
+        else if (sal > 250000){
+            tax10 = (sal-250000) * (10/100);
+        }
+
+        tottax = tax10 + tax20 + tax30;
+        npay = sal - tottax;
+
+        numsal.value = sal;
+        numtax10.value = tax10;
+        numtax20.value = tax20;
+        numtax30.value = tax30;
+        numtottax.value = tottax;
+        numnpay.value = npay;
+    }
+</script>
+
+<head>
+    <title>Employee Salary Tax</title>
+</head>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>
+            <input 
+            type="number" 
+            id="numeid" 
+            placeholder="0">
+        </td>
+    </tr>
+    <tr>
+        <td>Employee Name</td>
+        <td>
+            <input 
+            type="text" 
+            id="tbxename" 
+            placeholder="unknown">
+        </td>
+    </tr>
+    <tr>
+        <td>Salary</td>
+        <td>
+            <input 
+            type="number" 
+            id="numsal" 
+            placeholder="0.0" 
+            step="any">
+        </td>
+    </tr>
+    <tr>
+        <td>Tax 10%</td>
+        <td>
+            <input 
+            type="number" 
+            id="numtax10" 
+            placeholder="0.0" 
+            step="any" 
+            readonly>
+        </td>
+    </tr>
+    <tr>
+        <td>Tax 20%</td>
+        <td>
+            <input 
+            type="number" 
+            id="numtax20" 
+            placeholder="0.0" 
+            step="any" 
+            readonly>
+        </td>
+    </tr>
+    <tr>
+        <td>Tax 30%</td>
+        <td>
+            <input 
+            type="number" 
+            id="numtax30" 
+            placeholder="0.0" 
+            step="any" 
+            readonly>
+        </td>
+    </tr>
+    <tr>
+        <td>Total Salary</td>
+        <td>
+            <input 
+            type="number" 
+            id="numtottax" 
+            placeholder="0.0" 
+            step="any" 
+            readonly>
+        </td>
+    </tr>
+    <tr>
+        <td>Net Salary</td>
+        <td>
+            <input 
+            type="number" 
+            id="numnpay" 
+            placeholder="0.0" 
+            step="any" 
+            readonly>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input 
+            type="button" 
+            value="Cancel" 
+            onclick="location.href='p007est.html';">
+        </td>
+        <td>
+            <input 
+            type="button" 
+            value="Find" 
+            onclick="btnFind_onclick();">
+        </td>
+    </tr>
+</table>

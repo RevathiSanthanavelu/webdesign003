@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <title>Signature</title>
+
+    <script>
+        function btnFind_onclick(){
+            var n = 0;
+
+            n = numn.value;
+            n = parseFloat(n);
+            n = isNaN(n) ? 0 : n;
+
+            if(n > 0){
+                chbxptve.checked = true;
+                chbxntve.checked = false;
+                chbxntrl.checked = false
+            }
+            else if(n < 0){
+                chbxntve.checked = true;
+                chbxptve.checked = false;
+                chbxntrl.checked = false
+            }
+            else{
+                chbxntrl.checked = true;
+                chbxptve.checked = false;
+                chbxntve.checked = false;
+            }
+
+            numn.value = n;
+        }
+    </script>
+</head>
+<table border="1">
+    <tr>
+        <td>Enter a Numeric Value</td>
+        <td>
+            <input type="number" id="numn" placeholder="0.0" step="any">
+        </td>
+    </tr>
+    <tr>
+        <td>Signature</td>
+        <td>
+            <input type="checkbox" id="chbxptve"disabled="disabled">
+            <span id="spnop">Positive</span>
+
+            <input type="checkbox" id="chbxntrl"disabled="disabled">
+            <span id="spnop">Neutral</span>
+
+            <input type="checkbox" id="chbxntve"disabled="disabled">
+            <span id="spnop">Negative</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="location.href='sign1.html';">Cancel</button>
+        </td>
+        <td>
+            <button onclick="btnFind_onclick();">Find</button>
+        </td>
+    </tr>

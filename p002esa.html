@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<script>
+    function btnFind_onclick(){
+        //below initialize variable
+        var sal = 0, hra = 0, da = 0, pf = 0, gpay = 0, npay = 0;
+
+        sal = numsal.value;
+        sal = parseFloat(sal);
+        sal = isNaN(sal) ? 0 : sal;
+
+        hra = sal * 20/100;
+        da = sal * 15/100;
+        pf = sal * 35/100;
+        gpay = sal+hra+da;
+        npay = gpay-pf;
+
+        numsal.value = sal;
+        numhra.value = hra;
+        numda.value = da;
+        numpf.value = pf;
+        numgpay.value = gpay;
+        numnpay.value = npay;
+    };
+</script>
+
+<head>
+    <title>Employee Salary Allowance</title>
+</head>
+
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>
+            <input 
+            type="number"
+            id="numeid"
+            placeholder="0"
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>Name</td>
+        <td>
+            <input 
+            type="text"
+            id="tbxename"
+            placeholder="unknown"
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>Salary</td>
+        <td>
+            <input 
+            type="number"
+            id="numsal"
+            placeholder="0"
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>House Rent Allowance</td>
+        <td>
+            <input 
+            type="number"
+            id="numhra"
+            placeholder="0"
+            readonly
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>Dearness Allowance</td>
+        <td>
+            <input 
+            type="number"
+            id="numda"
+            placeholder="0"
+            readonly
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>Provident Fund</td>
+        <td>
+            <input 
+            type="number"
+            id="numpf"
+            placeholder="0"
+            readonly
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>Gross Pay</td>
+        <td>
+            <input 
+            type="number"
+            id="numgpay"
+            placeholder="0"
+            readonly
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>Net Pay</td>
+        <td>
+            <input 
+            type="number"
+            id="numnpay"
+            placeholder="0"
+            readonly
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input  
+            type="button"
+            value="Cancel"
+            onclick="location.href='p002esa.html';"
+            >
+        </td>
+        <td>
+            <input 
+            type="button"
+            value="Find"
+            onclick="btnFind_onclick();"
+            >
+        </td>
+    </tr>
+</table>

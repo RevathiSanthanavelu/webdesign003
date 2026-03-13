@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <title>Radio Button for Attendance</title>
+    <script>
+        function btnFind_onclick(){
+            var evngcls = "", mrngcls = "";
+
+            if(rdobtnmrab.checked){
+                mrngcls = "Absent";
+            }
+            else{
+                mrngcls = "Present"
+            }
+
+            if(rdobtnevab.checked){
+                evngcls = "Absent";
+            }
+            else{
+                evngcls = "Present"
+            }
+
+            tbxmrng.value = mrngcls;
+            tbxevng.value = evngcls;
+        }
+    </script>
+</head>
+<table border="1">
+    <tr>
+        <td>Monring Class</td>
+        <td>Evening Class</td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="radio" id="rdobtnmrab" name="rdobtn_mrng">Absent
+        </td>
+        <td>
+            <input type="radio" id="rdobtnevab" name="rdobtn_evng">Absent
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="radio" id="rdobtnmrpr" name="rdobtn_mrng">Present
+        </td>
+        <td>
+            <input type="radio" id="rdobtnevpr" name="rdobtn_evng">Present
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button onclick="btnFind_onclick();">Find</button>
+        </td>
+    </tr>
+</table>
+<br>
+<table>
+    <tr>
+        <td>Morning Class :</td>
+        <td>
+            <input type="text" id="tbxmrng" placeholder="Absent">
+        </td>
+    </tr>
+    <tr>
+        <td>Evening Class :</td>
+        <td>
+            <input type="text" id="tbxevng" placeholder="Absent">
+        </td>
+    </tr>
+
+</table>

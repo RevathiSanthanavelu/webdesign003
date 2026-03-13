@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<script>
+    function btnPass_onclick(){
+        chkbxresult.checked = true;
+        spnresult.innerText = "Pass"
+    }
+
+    function btnFail_onclick(){
+        chkbxresult.checked = false;
+        spnresult.innerText = "Fail"
+    }
+
+</script>
+
+<input 
+type="checkbox" 
+id="chkbxresult" 
+disabled
+>
+<span id="spnresult">Fail</span>
+
+<input 
+type="button"
+value="Pass"
+onclick="btnPass_onclick();"
+>
+<input 
+type="button"
+value="Fail"
+onclick="btnFail_onclick();"
+>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<script>
+    function uToFloat(s){
+        var n = parseFloat(s);
+        n = isNaN(n) ? 0 : n;
+        return n;
+    }
+
+    function btnFind_onclick(){
+        var m1 = uToFloat(numm1.value);
+        var m2 = uToFloat(numm2.value);
+
+        if (m1 > 34.4 && m2 > 34.4){
+            rdobtnPass.checked = true;
+        }
+        else {
+            rdobtnFail.checked = true
+        }
+    }
+</script>
+
+Mark1
+<input 
+type="number"
+id="numm1"
+placeholder="0.0"
+step="any"
+>
+<br>
+Mark2
+<input 
+type="number"
+id="numm2"
+placeholder="0.0"
+step="any"
+>
+<br>
+<input 
+type="radio"
+name="result"
+id="rdobtnPass"
+value="Pass"
+disabled = "disabled"
+>Pass
+<input 
+type="radio"
+name="result"
+id="rdobtnFail"
+value="Fail"
+disabled = "disabled"
+>Fail
+<br>
+<input 
+type="button"
+value="Find"
+onclick="btnFind_onclick();"
+>

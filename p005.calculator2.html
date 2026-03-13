@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<script>
+    function btnAdd_onclick(){
+        //below initialize variable
+        var fn = 0, sn = 0, result = 0;
+
+        fn = numfn.value;
+        fn = parseFloat(fn);
+        fn = isNaN(fn) ? 0 : fn;
+
+        sn = numsn.value;
+        sn = parseFloat(sn);
+        sn = isNaN(sn) ? 0 : sn;
+
+        numresult.value = fn+sn;
+    };
+
+    function btnSubtract_onclick(){
+        //below initialize variable
+        var fn = 0, sn = 0, result = 0;
+
+        fn = numfn.value;
+        fn = parseFloat(fn);
+        fn = isNaN(fn) ? 0 : fn;
+
+        sn = numsn.value;
+        sn = parseFloat(sn);
+        sn = isNaN(sn) ? 0 : sn;
+
+        numresult.value = fn-sn;
+    };
+
+    function btnMultiple_onclick(){
+        //below initialize variable
+        var fn = 0, sn = 0, result = 0;
+
+        fn = numfn.value;
+        fn = parseFloat(fn);
+        fn = isNaN(fn) ? 0 : fn;
+
+        sn = numsn.value;
+        sn = parseFloat(sn);
+        sn = isNaN(sn) ? 0 : sn;
+
+        numresult.value = fn*sn;
+    };
+
+    function btnDivide_onclick(){
+        //below initialize variable
+        var fn = 0, sn = 0, result = 0;
+
+        fn = numfn.value;
+        fn = parseFloat(fn);
+        fn = isNaN(fn) ? 0 : fn;
+
+        sn = numsn.value;
+        sn = parseFloat(sn);
+        sn = isNaN(sn) ? 0 : sn;
+
+        numresult.value = fn/sn;
+    };
+
+    function btnModulus_onclick(){
+        //below initialize variable
+        var fn = 0, sn = 0, result = 0;
+
+        fn = numfn.value;
+        fn = parseFloat(fn);
+        fn = isNaN(fn) ? 0 : fn;
+
+        sn = numsn.value;
+        sn = parseFloat(sn);
+        sn = isNaN(sn) ? 0 : sn;
+
+        numresult.value = fn%sn;
+    };
+
+    function btnPower_onclick(){
+        //below initialize variable
+        var fn = 0, sn = 0, result = 0;
+
+        fn = numfn.value;
+        fn = parseFloat(fn);
+        fn = isNaN(fn) ? 0 : fn;
+
+        sn = numsn.value;
+        sn = parseFloat(sn);
+        sn = isNaN(sn) ? 0 : sn;
+
+        numresult.value = fn**sn;
+    };
+</script>
+
+
+<head>
+    <title>Calculator</title>
+</head>
+
+<table border="1">
+    <tr>
+        <td>First Number</td>
+        <td>
+            <input 
+            type="number"
+            id="numfn"
+            placeholder="0"
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>Second Number</td>
+        <td>
+            <input 
+            type="number"
+            id="numsn"
+            placeholder="0"
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>Result</td>
+        <td>
+            <input 
+            type="number"
+            id="numresult"
+            placeholder="0"
+            readonly
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input  
+            type="button"
+            value="Cancel"
+            onclick="location.href='p005.calculater.html';"
+            >
+            <input 
+            type="button"
+            value="+"
+            onclick="btnCalcu_onclick('+');"
+            >
+            <input 
+            type="button"
+            value="-"
+            onclick="btnCalcu_onclick('-');"
+            >
+            <input 
+            type="button"
+            value="x"
+            onclick="btnCalcu_onclick('x');"
+            >
+        </td>
+        <td>
+            <input 
+            type="button"
+            value="/"
+            onclick="btnCalcu_onclick('/');"
+            >
+            <input 
+            type="button"
+            value="%"
+            onclick="btnCalcu_onclick('%');"
+            >
+            <input 
+            type="button"
+            value="^"
+            onclick="btnCalcu_onclick('^');"
+            >
+        </td>
+    </tr>
+</table>

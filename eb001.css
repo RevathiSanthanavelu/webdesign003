@@ -1,0 +1,17 @@
+table{
+    width: 100%;
+}
+
+/* input{
+    width: 96%;
+    text-align: right;
+} */
+
+input[type = "number"]{
+    width: 97%;
+    text-align: right;
+}
+
+select{
+    width: 98%;
+}

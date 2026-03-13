@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<script>
+    function btnFind_onclick(){
+        //below initialize variable
+        var mn = 0;
+
+        mn = nummn.value;
+        mn = parseFloat(mn);
+        mn = isNaN(mn) ? 0 : mn;
+
+        for(i = 1; i<=20; i++){
+            taop.append((i + "x" + mn + "=" + (i*mn))+"\n");
+        };
+
+    };
+</script>
+
+<head>
+    <title>Multiplication Table</title>
+</head>
+
+<table border="1">
+    <tr>
+        <td>Multipication Number</td>
+        <td>
+            <input 
+            type="number"
+            id="nummn"
+            placeholder="0"
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input  
+            type="button"
+            value="Cancel"
+            onclick="location.href='p006mt.html';"
+            >
+        </td>
+        <td>
+            <input 
+            type="button"
+            value="Find"
+            onclick="btnFind_onclick();"
+            >
+        </td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td>
+            <textarea
+            id="taop"
+            readonly
+            >
+            </textarea>
+        </td>
+    </tr>
+</table>

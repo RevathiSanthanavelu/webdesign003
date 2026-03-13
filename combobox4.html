@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+    <title>Combobox4</title>
+    <script>
+        function btncmbxcc_onclick(){
+            dvop.innerText=cmbbxcc.value;
+        }
+    </script>
+</head>
+
+<select id="cmbbxcc" oninput="btncmbxcc_onclick();">
+    <option value="Agriculture">Agriculture</option>
+    <option value="Domestic">Domestic</option>
+    <option value="Commercial" selected="selected">Commercial</option>
+</select>
+<div id="dvop">wait...</div>
